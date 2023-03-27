@@ -7,6 +7,111 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="titulo">
+        <div id="pregunta">a</div>
+        <div>
+            <ul id="respuesta"></ul>
+        </div>
+        <div>
+            <button onclick="aumentari(),myOnLoad()" id="Siguiente">Empezar</button>
+        </div>
+    </div>
+    <script>
+        var i=-1;
+        var preguntas=['¿Pruebas?','¿Fulham?','¿Racing?'];
+        var pregunta1=['Si','No'];
+        var pregunta2=['No se','Blanco','Negro'];
+        var pregunta3=['Verde','Blanco','Azul'];
+        var correcto=['Si','Negro','Verde'];
+        var pregunta=document.getElementById("pregunta");
+        var respuesta=document.getElementById("respuesta");
+        var botonSig=document.getElementById("Siguiente");
+        //CREAR PREGUNTA
+        function titlePreg(){
+            while (pregunta.firstChild) {
+                pregunta.removeChild(pregunta.firstChild);
+            }
+            var boton = document.createElement("p");
+            boton.innerHTML = preguntas[i];
+            boton.className="w-100";
+            console.log(boton)
+            pregunta.appendChild(boton);
+            console.log('valor i:'+i);
+            opcion(i);
+        }
+        //AUMENTAR VALOR I
+        function aumentari(){
+            console.log('valor i:'+i);
+            if(i>1){
+                finalQuiz();
+            }
+            i++;
+        }
+        //CARGA
+        function myOnLoad(){
+            titlePreg();
+        }
+        //OPCION RESPEUSTA
+        function opcion(opc){
+            console.log(opc);
+            recorrerRespuesta(opc);
+        }
+        //CREAR RESPUESTAS
+        function recorrerRespuesta(num){
+            console.log(num);
+            switch (num){
+                case 0:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta1.length;j++){
+                    var option= document.createElement("li");
+                    option.innerHTML=pregunta1[j];
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                case 1:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta2.length;j++){
+                    var option= document.createElement("li");
+                    option.innerHTML=pregunta2[j];
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                case 2:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta3.length;j++){
+                    var option= document.createElement("li");
+                    option.innerHTML=pregunta3[j];
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                default:console.log('DEFAULT');
+            }
+            
+        }
+        //FINAL QUIZ
+        function finalQuiz(){
+            botonSig.style="display: none;";
+            while (pregunta.firstChild) {
+                pregunta.removeChild(pregunta.firstChild);
+            }
+            while (respuesta.firstChild) {
+                respuesta.removeChild(respuesta.firstChild);
+            }
+            var boton=document.createElement("h3");
+            boton.innerHTML='PUNTOS';
+            pregunta.appendChild(boton);
+        }
+
+        
+    </script>
 </body>
 </html>
