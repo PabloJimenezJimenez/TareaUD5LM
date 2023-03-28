@@ -1,0 +1,8 @@
+.li-style{
+    display: block;
+    text-align: left;
+}
+.hover-li-style:hover{
+
+    background-color: beige;
+}
