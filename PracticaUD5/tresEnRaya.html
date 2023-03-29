@@ -10,28 +10,28 @@
 </head>
 <body>
 
-    <div class="container text-center mt-4" id="zona">
+    <div class="container text-center mt-4" >
 
         <h2>TRES EN RAYA:</h2>
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4 mt-4">
                 <table class="table table-bordered border-3" 
-                style="height: 50vh;border-color:black;width: 50vh;">    
+                style="height: 50vh;border-color:black;width: 50vh;" id="zona">    
                     <tr >
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
                     </tr>
                     <tr>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
                     </tr>
                     <tr>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
-                        <td style="height: 100px;width: 100px;" class="casilla"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
+                        <td style="height: 100px;width: 100px;"> </td>
                     </tr>
                 </table>
             </div>
@@ -39,15 +39,14 @@
         </div>
         
         <div class="container text-center mt-4">
-            <img src="/x.png" width="100px" id="x" draggable="true">
-            <img src="/o.png" width="100px" id="o" draggable="true">
+            <img src="x.png" width="100px" id="x" draggable="true">
+            <img src="o.png" width="100px" id="o" draggable="true">
         </div>
             
     </div>  
 
     <script>
-
-        const casilla=document.getElementsByClassName('casilla');
+                
         const x = document.getElementById('x');
         const o = document.getElementById('o');
         const drop_zone = document.getElementById('zona');
@@ -70,20 +69,18 @@
         }
         
         function drop (e){
-
-            for (let i = 0; i < casilla.length; i++) {
-                const element = casilla[i];
+            if (e.target.style.backgroundColor=='') {
+                            
                 if(x.id==e.dataTransfer.getData('text/plain')){
-                e.target.style.backgroundColor='blue';
-              
-               
+                    e.target.style.backgroundColor='blue';
+                    console.log("uno")
+                    
                 }else if(o.id==e.dataTransfer.getData('text/plain')){
                     e.target.style.backgroundColor='red';  
-                } 
-            }
-
-            
-            
+                    console.log("dos")
+                }
+                
+            }               
         }
 
 
