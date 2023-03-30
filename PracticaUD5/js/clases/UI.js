@@ -20,6 +20,7 @@ export class UI {
         for(let i=0;i<choices.length;i++){
             const botones=document.createElement('button');
             botones.innerHTML=choices[i];
+            botones.className="boton"
             botones.addEventListener('click', () => {
                 callback(choices[i])
             })
@@ -28,15 +29,37 @@ export class UI {
 
         }
     }
-
     /**
      * 
      * @param {Number} puntos 
      */
     pantallaFinal(puntos){
-        const finalPicture=`<h1>Puntos<h1><h2> ${puntos}<h2>`;
-        const elemenQuiz= document.getElementById('pricipal');
-        elemenQuiz.innerHTML=finalPicture;
+        if(puntos>0){
+            const finalPicture=`
+            <div class="intento">
+                <a href="index.html">Inicio</a>
+            </div>
+            <div id="titulo"><h1>RESULTADO FINAL</h1></div>
+            <div id="puntos"><h2>PUNTOS: ${puntos}</h2></div>
+            <div class="intento">
+                <a href="quiz.html">Reiniciar</a>
+            </div>`;
+            const elemenQuiz= document.getElementById('pricipal');
+            elemenQuiz.innerHTML=finalPicture;
+        }else{
+            const finalPicture=`
+            <div class="intento">
+                <a href="index.html">Inicio</a>
+            </div>
+            <div id="titulo"><h1>RESULTADO FINAL</h1></div>
+            <div id="puntos"><h2>LA PROXIMA VEZ IRA MEJOR =)</h2></div>
+            <div class="intento">
+                <a href="quiz.html">Reiniciar</a>
+            </div>`;
+            const elemenQuiz= document.getElementById('pricipal');
+            elemenQuiz.innerHTML=finalPicture;
+        }
+        
     }
 
     /**

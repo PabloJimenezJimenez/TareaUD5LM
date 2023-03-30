@@ -9,38 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-sm">
-        <div class="row text-center">
-            <h1 class="text-bg-success">QUIZ</h1>
+    <div id="pricipal">
+        <div id="encabezado">
+            <h1>QUIZ</h1>
+            <h3 class="temporizador" id="temp" style="display: none;"></h3>
         </div>
-        <div id="pricipal">
-            <div class="row">
-                <div class="col bg-success">
-                    <div id="temporizador-container"></div>
-                </div>
-                <div class="col text-center" id="pregunta">
-                    <!--<h5>Reglas</h5>
-                    <p class="text-start">- El juego consta de 5 preguntas</p>
-                    <p class="text-start">- El acierto suma 20 puntos</p>
-                    <p class="text-start">- El fallo resta 10 puntos</p>
-                    <p class="text-start">- Tienes 20 segundos para responder la pregunta</p>
-                    <p class="text-start">- Clicka sobre la pregunta y dale a siguiente</p>
-                    <h6 class="text-start">- ¿Estas listo?</h6>
-                    <button class="btn btn-success" onclick="comenzar()">COMENZAR</button>-->
-                </div>
-                <div class="col bg-dark"></div>
-            </div>
-            <div class="row">
-                <div class="col bg-success"></div>
-                <div class="col " id="respuesta"></div>
-                <div class="col"></div>
-            </div>
-            <div class="row">
-                <div class="col bg-success"></div>
-                <div class="col " id="progreso"></div>
-                <div class="col"></div> 
-            </div>
+        <div id="reglas">
+            <h3>Reglas</h3>
+            <p class="fs-3">- El quiz trata de la F1</p>
+            <p class="fs-3">- El quiz consta de 5 preguntas</p>
+            <p class="fs-3">- El acierto suma 20 puntos</p>
+            <p class="fs-3">- El fallo resta 10 puntos</p>
+            <p class="fs-3">- Tienes 20 segundos para responder la pregunta</p>
+            <h4>¿Estas listo?</h4>
+            <button class="botonComenzar" id="comenzar">COMENZAR</button>
         </div>
+        <div id="quiz" style="display: none;">
+            <h4 id="pregunta"></h4>
+            <div id="respuesta"></div>
+        </div>
+        <div id="progreso" style="display: none;"></div>
     </div>
     <script src="./js/app.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

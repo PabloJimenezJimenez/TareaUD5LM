@@ -1,35 +1,57 @@
-//creo una lista de objetos, cada uno de ellos con una pregunta, un arreglo de respuestas y una opcion correcta
+//creo una lista de objetos, cada uno de ellos con una pregunta, un array de respuestas y una opcion correcta
 export const data=[
     {
-        question: '¿Cual es la capital de España?',
+        question: '¿Que efecto esta presente en el suelo de los F1?',
         answers: [
-            'Paris',
-            'Lisboa',
-            'Valencia',
-            'Madrid'    
+            'Ninguno',
+            'Aero',
+            'Bertolicci',
+            'Suelo'    
         ],
-        correct: 'Madrid'
+        correct: 'Suelo'
     },
 
     {
-        question: '¿Cual es la capital de Francia?',
+        question: '¿Donde se corre el GP de España?',
         answers: [
-            'Paris',
-            'Lisboa',
-            'Valencia',
-            'Madrid'    
+            'Circuito de Jerez',
+            "Circuit d' Barcelona-Montmelo",
+            'Circuit Ricardo Tomo (Valencia)',
+            'Circuito del Jarama (Madrid)'    
         ],
-        correct: 'Paris'
+        correct: "Circuit d' Barcelona-Montmelo"
     },
 
     {
-        question: '¿Cual es la capital de la Comunidad Valenciana?',
+        question: '¿Cual ha sido el último piloto campeón de la F1?',
         answers: [
-            'Paris',
-            'Lisboa',
-            'Valencia',
-            'Madrid'    
+            'Max Verstappen',
+            "Sergio 'Checo' Perez",
+            'Charles Leclerc',
+            'Lewis Hamilton'    
         ],
-        correct: 'Valencia'
+        correct: 'Max Verstappen'
+    },
+
+    {
+        question: '¿Cual ha sido el último constructor campeón de la F1?',
+        answers: [
+            'Red Bull',
+            'AMG Mercedes-Benz',
+            'Ferrari',
+            'Williams'    
+        ],
+        correct: 'Red Bull'
+    },
+
+    {
+        question: '¿Cuantos pilotos españoles hay en la parrilla de la temporada 2023?',
+        answers: [
+            '4',
+            '0',
+            '1',
+            '2'    
+        ],
+        correct: '2'
     },
 ]

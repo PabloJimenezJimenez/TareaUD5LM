@@ -30,4 +30,9 @@ export class Quiz{
         this.indice++;
     }
 
+    aumentarIndice(){
+        this.indice++;
+        this.puntos-=10;
+    }
+
 }
