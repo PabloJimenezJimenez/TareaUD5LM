@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/quiz.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="pricipal">
+        <div id="encabezado">
+            <h1>QUIZ</h1>
+            <h3 class="temporizador" id="temp" style="display: none;"></h3>
+        </div>
+        <div id="reglas">
+            <h3>Reglas</h3>
+            <p class="fs-3">- El quiz trata de la F1</p>
+            <p class="fs-3">- El quiz consta de 5 preguntas</p>
+            <p class="fs-3">- El acierto suma 20 puntos</p>
+            <p class="fs-3">- El fallo resta 10 puntos</p>
+            <p class="fs-3">- Tienes 20 segundos para responder la pregunta</p>
+            <h4>¿Estas listo?</h4>
+            <button class="botonComenzar" id="comenzar">COMENZAR</button>
+        </div>
+        <div id="quiz" style="display: none;">
+            <h4 id="pregunta"></h4>
+            <div id="respuesta"></div>
+        </div>
+        <div id="progreso" style="display: none;"></div>
+    </div>
+    <script src="./js/app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

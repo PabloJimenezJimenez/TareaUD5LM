@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/quiz.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-sm">
+        <div class="row text-center">
+            <h1 class="text-bg-success">QUIZ</h1>
+        </div>
+        <div class="row">
+            <div class="col bg-success">
+                <div id="temporizador-container"></div>
+            </div>
+            <div class="col text-center" id="pregunta">
+                <h5>Reglas</h5>
+                <p class="text-start">- El juego consta de 5 preguntas</p>
+                <p class="text-start">- El acierto suma 20 puntos</p>
+                <p class="text-start">- El fallo resta 10 puntos</p>
+                <p class="text-start">- Tienes 20 segundos para responder la pregunta</p>
+                <p class="text-start">- Clicka sobre la pregunta y dale a siguiente</p>
+                <h6 class="text-start">- ¿Estas listo?</h6>
+                <button class="btn btn-success" onclick="comenzar(),aumentari(),myOnLoad(),reiniciarTemp()">COMENZAR</button>
+            </div>
+            <div class="col bg-dark"></div>
+        </div>
+        <div class="row">
+            <div class="col bg-success"></div>
+            <div class="col " id="respuesta"></div>
+            <div class="col bg-dark">
+                <div>
+                    <button id="Siguiente" onclick="aumentari(),myOnLoad(),reiniciarTemp()" class="d-none">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //DECLARACION VARIABLES
+        var i=-1;
+        var preguntas=['¿Pruebas?','¿Fulham?','¿Racing?'];
+        var pregunta1=['Si','No'];
+        var pregunta2=['No se','Blanco','Negro'];
+        var pregunta3=['Verde','Blanco','Azul'];
+        var correcto=['Si','Negro','Verde'];
+        var pregunta=document.getElementById("pregunta");
+        var respuesta=document.getElementById("respuesta");
+        var botonSig=document.getElementById("Siguiente");
+        var temporizadorContainer = document.getElementById("temporizador-container")
+        var intevalTiempo;
+        //CREAR PREGUNTA
+        function titlePreg(){
+            while (pregunta.firstChild) {
+                pregunta.removeChild(pregunta.firstChild);
+            }
+            var boton = document.createElement("h4");
+            boton.innerHTML = preguntas[i];
+            boton.className="w-100";
+            console.log(boton)
+            pregunta.appendChild(boton);
+            console.log('valor i:'+i);
+            if(i>2){
+                finalQuiz();
+            }
+            opcion(i);
+        }
+        //AUMENTAR VALOR I
+        function aumentari(){
+            console.log('valor i:'+i);
+            i++;
+        }
+        //CARGA
+        function myOnLoad(){
+            titlePreg();
+        }
+        //OPCION RESPEUSTA
+        function opcion(opc){
+            //console.log(opc);
+            recorrerRespuesta(opc);
+        }
+        //CREAR RESPUESTAS
+        function recorrerRespuesta(num){
+            console.log(num);
+            switch (num){
+                case 0:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta1.length;j++){
+                    var option= document.createElement("label");
+                    option.innerHTML="<input type='radio' name='respuestas' value='" + pregunta1[j]+ "'> "+ pregunta1[j];
+                    option.className='li-style hover-li-style fs-3';
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                case 1:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta2.length;j++){
+                    var option= document.createElement("label");
+                    option.innerHTML="<input type='radio' name='respuestas' value='" + pregunta2[j]+ "'> "+ pregunta2[j]
+                    option.className='li-style hover-li-style fs-3';
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                case 2:{
+                    while (respuesta.firstChild) {
+                        respuesta.removeChild(respuesta.firstChild);
+                    }
+                    for(let j=0;j<pregunta3.length;j++){
+                    var option= document.createElement("label");
+                    option.innerHTML="<input type='radio' name='respuestas' value='" + pregunta3[j]+ "'> "+ pregunta3[j]
+                    option.className='li-style hover-li-style fs-3';
+                    console.log(option);
+                    respuesta.appendChild(option);
+                    };break;
+                }
+                default:console.log('DEFAULT');
+            }
+            
+        }
+        //FINAL QUIZ
+        function finalQuiz(){
+            botonSig.className="d-none";
+            temporizadorContainer.style="display: none;";
+            while (pregunta.firstChild) {
+                pregunta.removeChild(pregunta.firstChild);
+            }
+            while (respuesta.firstChild) {
+                respuesta.removeChild(respuesta.firstChild);
+            }
+            var boton=document.createElement("h3");
+            boton.innerHTML='PUNTOS';
+            pregunta.appendChild(boton);
+        }
+        //INTERVALO DE TIEMPO
+        function IniciarTiempo(){
+            let tiemp=20;
+            tiempoRest=tiemp;
+            temporizadorContainer.innerHTML='Tiempo Restante: '+tiempoRest+' seg';
+            intevalTiempo=setInterval(function (){
+               tiempoRest--;
+               temporizadorContainer.innerHTML='Tiempo Restante: '+tiempoRest+' seg';
+               if(tiempoRest==0){
+                i++;
+                if(i<2){
+                    titlePreg();
+                    reiniciarTemp();
+                }else{
+                    finalQuiz();
+                }
+               }
+            },1000);
+        }
+        //DETENER TEMPORIZADOR
+        function detenerTemporizador() {
+            clearInterval(intevalTiempo);
+        }
+        //REINICIAR TEMPORIZADOR
+        function reiniciarTemp(){
+            detenerTemporizador();
+            IniciarTiempo();
+        }
+        //COMPROBAR
+        respuesta.addEventListener('change', function(event) {
+            var valori=i;
+            var valorSeleccionado = event.target.value;
+            console.log('El valor seleccionado es:', valorSeleccionado);
+            console.log('valor i'+i);
+            console.log('valori'+valori)
+            botonSig.addEventListener( 'click',function(){
+                for(let j=0;j>correcto.length;j++){
+                    if(valorSeleccionado==correcto[j]){
+                        console.log("Has acertado");
+                    }
+                }
+            })
+        });
+
+        //BOTON COMENZAR
+        function comenzar(){
+            botonSig.className='btn btn-success d-block'
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
