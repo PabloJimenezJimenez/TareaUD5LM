@@ -65,12 +65,12 @@ body{
 
 #reglas p{
     text-align: justify;
-    margin: 4%;
+    margin: 2%;
 }
 
 #reglas h4{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 /* ID PREGUNTA */
@@ -138,7 +138,7 @@ body{
     }
 
     body{
-        overflow: hidden;
+        overflow-x: hidden;
     }
     .intento{
         width: 40%;
