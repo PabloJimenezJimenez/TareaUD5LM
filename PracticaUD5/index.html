@@ -5,27 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/index.css">
-    <title>Document</title>
+    <title>Inicio</title>
 </head>
 <body>
  
     <div class="container mt-4">
         <h2 class="text-center mt-4 mb-4">Documentación del proyecto</h2>
-        <h4 class="mt-4 mb-4">Hecho por: Gonzalo Herrera y Pablo Jiménez</h4>
+        
         <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                    Organización de la entrega
+                    Hecho por:
                 </button>
               </h2>
               <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                 <div class="accordion-body">
-                  
+                  <p>Gonzalo Herrera y Pablo Jiménez</p>
                 </div>
               </div>
             </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                  Organización de la entrega
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>El primer y segundo dia en clase nos sirvio para establecer lo que queriamos hacer y luego cada uno
+                    se organizaba como queria. Teniamos un repositorio en github y ahi subiamos las actualizaciones de lo que 
+                    cada uno iba haciendo. 
+                  </p>
+                  <p>Uno hizo un juego y la página principal y otro hizo el quiz y el otro juego</p>
+                </div>
+                  
+              </div>
+          </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -34,7 +50,12 @@
               </h2>
               <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  
+                  <p>La página web consta de una página principal y tres juegos. Uno de ellos será un quiz, otro un tres en raya 
+                    y otro un juego de adivinar el número. 
+                  </p>
+                  <p>Desde la página principal podrás elegir a que juego quieres jugar, también en cada juego podras
+                  volver otra vez a la página principal.
+                  </p>
                 </div>
               </div>
             </div>
@@ -46,7 +67,19 @@
               </h2>
               <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                 <div class="accordion-body">
-                  
+                  <p>Los juegos son los siguientes</p>
+                  <li>Tres en raya</li>
+                  <p>En el tres en raya, debajo del tablero tienes dos imagenes, una x y un o. Estas son las fichas que tendras que arrastar 
+                    al tablero. Cuando arrastres una ficha al teblero esa cuadrícula se pondrá de un color en función de la ficha. 
+                    Cada jugador tiene un turno y ganará el que tenga tres fichas seguidas.
+                  </p>
+                  <li>Quiz</li>
+                  <p>Consta de 5 preguntas sobre la Formula 1, donde tienes un contador y unos puntos por cada pregunta contestada correctamente.</p>
+                  <li>Adivina el número</li>
+                  <p>Trata sobre adivinar un número que se genera de manera aleatoria. Tendras que poner un número y te ira dicinedo si el numero es 
+                    mayor o menor.
+                  </p>
+                </div>
               </div>
             </div>
             <div class="accordion-item">
@@ -57,6 +90,7 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                   <div class="accordion-body">
+                  </div>
                     
                 </div>
             </div>
@@ -68,7 +102,11 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    
+                    <p>En cuanto a los estilos hemos mezclado el uso de bootstrap para algunas cosas y para otras el de CSS.</p>
+                    <p>En las páginas que hay javaScript lo hemos hecho  dentro del mismo archivo. En el quiz hemos usado una carpeta 
+                      aparte con más ficheros javaScript.
+                    </p>
+                  </div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -79,7 +117,10 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    
+                    <p>Algunos problemas que hemos encontrado han sido juntar todo y que funcione, ya que cada uno tenia unos paths distintos 
+                      La solucion ha sido ponernos de acuerdo en como ibamos a llamar a cada carpeta y como iba a ser.
+                    </p>
+                  </div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -90,7 +131,8 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    
+                    <p>Una mejora sería que en el tres en raya la partida acabara cuando un jugador hace tres en raya.</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -101,8 +143,7 @@
       <button class="btn btn-dark mx-4 mt-4"><a href="adivinaNum.html" class="text-decoration-none text-white">ADIVINA EL NUMERO</a></button>
       <button class="btn btn-dark mx-4 mt-4"><a href="quiz.html" class="text-decoration-none text-white">QUIZ</a></button>
 
-    </div>
-    
+    </div>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
