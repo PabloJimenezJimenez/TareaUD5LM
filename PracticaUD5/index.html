@@ -90,6 +90,10 @@
                 </h2>
                 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                   <div class="accordion-body">
+                    <p>Para hacer responsive el Quiz lo que hemos hecho ha sido hacer un contenedor que almacene todo el quiz
+                      en el centro  usando un display flex en el body con un justify-content-center, en tamaño de pantalla superior
+                      a 768px y cuando es menor que eso que ocupe toda la pantalla. 
+                    </p>
                   </div>
                     
                 </div>
@@ -104,7 +108,7 @@
                   <div class="accordion-body">
                     <p>En cuanto a los estilos hemos mezclado el uso de bootstrap para algunas cosas y para otras el de CSS.</p>
                     <p>En las páginas que hay javaScript lo hemos hecho  dentro del mismo archivo. En el quiz hemos usado una carpeta 
-                      aparte con más ficheros javaScript.
+                      aparte con más ficheros javaScript. Todo esto lo hemos hecho usando CSS.
                     </p>
                   </div>
                 </div>
@@ -117,9 +121,40 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    <p>Algunos problemas que hemos encontrado han sido juntar todo y que funcione, ya que cada uno tenia unos paths distintos 
-                      La solucion ha sido ponernos de acuerdo en como ibamos a llamar a cada carpeta y como iba a ser.
-                    </p>
+                    <div>
+                      <h5>En General</h5>
+                      <p>Algunos problemas que hemos encontrado han sido juntar todo y que funcione, ya que cada uno tenia unos paths distintos 
+                        La solucion ha sido ponernos de acuerdo en como ibamos a llamar a cada carpeta y como iba a ser.
+                      </p>
+                    </div>
+                    <div>
+                      <h5>En el Test</h5>
+                      <p>Para hacer el Test hemos tenido bastamtes problemas, hemos tenido que hacer tres versiones pero al final
+                        hemos conseguido hacerlo gracias a la ayuda de un <a href="https://youtu.be/t_2PI3fHp_I">video</a> del canal
+                        Fazt Code 
+                      </p>
+                      <h6>Algunos de los problemas que hemos tenido han sido</h6>
+                      <ul>
+                        <li>El temporizador de la pregunta anterior se mantenia cuando cambiaba de pregunta, esto lo hemos solucionado creando una funcion
+                          que reinicia el temporizador, parandolo primero y luego llamando a la funcion que muestra las preguntas.
+                        </li>
+                        <li>La validación de las respuestas. Para esto lo que hemos hecho ha sido crear un objeto con
+                          tres atributos, uno que sea el enunciado, otro que sea un array con las opciones y otro que sea la respuesta.
+                          Con esto hemos podido comparar la respuesta que ha escogido el usuario con la respuesta correcta.
+                        </li>
+                        <li>El salto a la siguiente pregunta, al pricipio pusimos un boton de siguiente pero con esto no conseguiamos
+                          que nos devolviese bien la respuesta del usuario, lo que hizimos fue generar un evento onclick en el cual el
+                          usuario al hacer click en una de las opciones saltase directamente a la siguiente pregunta.
+                        </li>
+                        <li>El temporizador daba tiempo negativo. Esto lo solucionamos creando un condicional cuando llegara a cero</li>
+                        <li>Al principio no utilizabamos bien el setInterval ya que disminuiamos 1 segundo cada 20 segundos, esto
+                            lo solucionamos volviendo a leer los apuntes.
+                        </li>
+                      </ul>
+                      <p>Hemos tenido algun que otro problema menor con el CSS y a la hora de crear HTML desde JS pero lo hemos
+                        solucionado rapidamente.
+                      </p>
+                    </div>
                   </div>
                 </div>
             </div>
@@ -131,7 +166,11 @@
                 </h2>
                 <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    <p>Una mejora sería que en el tres en raya la partida acabara cuando un jugador hace tres en raya.</p>
+                    <ul>
+                      <li>El tres en raya la partida acabara cuando un jugador hace tres en raya.</li>
+                      <li>Los estilos CSS podrian trabajarse más</li>
+                      <li>Las transiciones entre preguntas en el test</li>
+                    </ul>
                   </div>
                 </div>
             </div>
