@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Inicio</title>
+</head>
+<body>
+ 
+    <div class="container mt-4">
+        <h2 class="text-center mt-4 mb-4">Documentación del proyecto</h2>
+        
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                    Hecho por:
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  <p>Gonzalo Herrera y Pablo Jiménez</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                  Organización de la entrega
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>El primer y segundo dia en clase nos sirvio para establecer lo que queriamos hacer y luego cada uno
+                    se organizaba como queria. Teniamos un repositorio en github y ahi subiamos las actualizaciones de lo que 
+                    cada uno iba haciendo. 
+                  </p>
+                  <p>Uno hizo un juego y la página principal y otro hizo el quiz y el otro juego</p>
+                </div>
+                  
+              </div>
+          </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                  Estructura
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>La página web consta de una página principal y tres juegos. Uno de ellos será un quiz, otro un tres en raya 
+                    y otro un juego de adivinar el número. 
+                  </p>
+                  <p>Desde la página principal podrás elegir a que juego quieres jugar, también en cada juego podras
+                  volver otra vez a la página principal.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                  Explicación de los juegos
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>Los juegos son los siguientes</p>
+                  <li>Tres en raya</li>
+                  <p>En el tres en raya, debajo del tablero tienes dos imagenes, una x y un o. Estas son las fichas que tendras que arrastar 
+                    al tablero. Cuando arrastres una ficha al teblero esa cuadrícula se pondrá de un color en función de la ficha. 
+                    Cada jugador tiene un turno y ganará el que tenga tres fichas seguidas.
+                  </p>
+                  <li>Quiz</li>
+                  <p>Consta de 5 preguntas sobre la Formula 1, donde tienes un contador y unos puntos por cada pregunta contestada correctamente.</p>
+                  <li>Adivina el número</li>
+                  <p>Trata sobre adivinar un número que se genera de manera aleatoria. Tendras que poner un número y te ira dicinedo si el numero es 
+                    mayor o menor.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    Enfoque para hacer responsive el quiz
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p>Para hacer responsive el Quiz lo que hemos hecho ha sido hacer un contenedor que almacene todo el quiz
+                      en el centro  usando un display flex en el body con un justify-content-center, en tamaño de pantalla superior
+                      a 768px y cuando es menor que eso que ocupe toda la pantalla. 
+                    </p>
+                  </div>
+                    
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                    Estructura del código
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p>En cuanto a los estilos hemos mezclado el uso de bootstrap para algunas cosas y para otras el de CSS.</p>
+                    <p>En las páginas que hay javaScript lo hemos hecho  dentro del mismo archivo. En el quiz hemos usado una carpeta 
+                      aparte con más ficheros javaScript. Todo esto lo hemos hecho usando CSS.
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                    Problemas y soluciones
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <div>
+                      <h5>En General</h5>
+                      <p>Algunos problemas que hemos encontrado han sido juntar todo y que funcione, ya que cada uno tenia unos paths distintos 
+                        La solucion ha sido ponernos de acuerdo en como ibamos a llamar a cada carpeta y como iba a ser.
+                      </p>
+                    </div>
+                    <div>
+                      <h5>En el Test</h5>
+                      <p>Para hacer el Test hemos tenido bastamtes problemas, hemos tenido que hacer tres versiones pero al final
+                        hemos conseguido hacerlo gracias a la ayuda de un <a href="https://youtu.be/t_2PI3fHp_I">video</a> del canal
+                        Fazt Code 
+                      </p>
+                      <h6>Algunos de los problemas que hemos tenido han sido</h6>
+                      <ul>
+                        <li>El temporizador de la pregunta anterior se mantenia cuando cambiaba de pregunta, esto lo hemos solucionado creando una funcion
+                          que reinicia el temporizador, parandolo primero y luego llamando a la funcion que muestra las preguntas.
+                        </li>
+                        <li>La validación de las respuestas. Para esto lo que hemos hecho ha sido crear un objeto con
+                          tres atributos, uno que sea el enunciado, otro que sea un array con las opciones y otro que sea la respuesta.
+                          Con esto hemos podido comparar la respuesta que ha escogido el usuario con la respuesta correcta.
+                        </li>
+                        <li>El salto a la siguiente pregunta, al pricipio pusimos un boton de siguiente pero con esto no conseguiamos
+                          que nos devolviese bien la respuesta del usuario, lo que hizimos fue generar un evento onclick en el cual el
+                          usuario al hacer click en una de las opciones saltase directamente a la siguiente pregunta.
+                        </li>
+                        <li>El temporizador daba tiempo negativo. Esto lo solucionamos creando un condicional cuando llegara a cero</li>
+                        <li>Al principio no utilizabamos bien el setInterval ya que disminuiamos 1 segundo cada 20 segundos, esto
+                            lo solucionamos volviendo a leer los apuntes.
+                        </li>
+                      </ul>
+                      <p>Hemos tenido algun que otro problema menor con el CSS y a la hora de crear HTML desde JS pero lo hemos
+                        solucionado rapidamente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                    Mejoras
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>El tres en raya la partida acabara cuando un jugador hace tres en raya.</li>
+                      <li>Los estilos CSS podrian trabajarse más</li>
+                      <li>Las transiciones entre preguntas en el test</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <div class="text-center mt-4 mx-4">
+      <button class="btn btn-dark mx-4 mt-4"><a href="tresEnRaya.html" class="text-decoration-none text-white">TRES EN RAYA</a></button>
+      <button class="btn btn-dark mx-4 mt-4"><a href="adivinaNum.html" class="text-decoration-none text-white">ADIVINA EL NUMERO</a></button>
+      <button class="btn btn-dark mx-4 mt-4"><a href="quiz.html" class="text-decoration-none text-white">QUIZ</a></button>
+
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+</html>
