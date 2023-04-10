@@ -1,0 +1,53 @@
+body{
+    background-color: antiquewhite;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 'una una una'
+                         'dos tres cuatro'
+                         'cinco cinco cinco';
+}
+
+#zona{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    width:300px;
+    margin: auto;
+    grid-area: tres;
+    
+}
+
+#zona button{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+}
+
+.titulo{
+    margin: 20px;
+    text-align: center;
+    background-color:burlywood;
+    grid-area: una;
+}
+.juegos{
+    text-align: center;
+    grid-area: cuatro;
+}
+
+.fotos{
+   
+    grid-area: cinco;
+    text-align: center;
+    margin: 20px;
+    margin-right: 6%;
+    
+}
+.reinicio{
+    text-align: center;
+    margin-top: 30px;
+    grid-area: dos;
+}
+.normas{
+    grid-area: dos;
+}
